@@ -1,4 +1,4 @@
-function model_problem(k,N,solver) 
+function exponential_model(k,N,solver) 
 	% ===========================
 	% SOLVES THE MODEL PROBLEM 
 	% y'(t) = k*y(t), y(0) = 1 

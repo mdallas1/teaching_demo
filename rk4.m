@@ -1,10 +1,17 @@
 function y = rk4(a,b,y0,f,N)
-  % ===============================
+  % ==================================
+	% y = rk4(a,b,y0,f,N)
+	% 
   % FOURTH ORDER RUNGE-KUTTA METHOD
-  % FOR CAUCHY PROBLEM y' = f(t,y)
-  % ON [a,b] with y(0) = y0 
-  % WITH N NODES.
-  % ===============================
+  % FOR SOLVING y' = f(t,y) ON [a,b] 
+	% with y(0) = y0. 
+	% 
+	% - a AND b ARE THE ENDPOINTS. 
+	% - y0 IS THE INITIAL CONDITION. 
+	%      CAN BE A SCALAR OR VECTOR.
+	% - f IS THE RIGHT-HAND-SIDE. 
+	% - N IS THE NUMBER OF NODES TO USE.
+  % ==================================
 	nn = size(y0,1); 
   y = zeros(nn,N); y(:,1)=y0; h = (b-a)/(N-1);
   nodes = a:h:b;

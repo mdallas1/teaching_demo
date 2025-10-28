@@ -14,7 +14,7 @@ demonstrations are written in MATLAB/GNU Octave. They are:
 - `fwd_euler`: Forward Euler method. 
 - `rk2`: Order 2 Runge-Kutta method. 
 - `rk4`: Order 4 Runge-Kutta method. 
-- `exponential_model`: Solves the exponential growth/decay problem 
+- `exp_model`: Solves the exponential growth/decay problem 
 $y'(x) = ky(x)$. 
 - `harmonic_oscillator`: Solves the second order ODE $x''(t) + x(t) = 0$ 
 subject to the initial conditions $x(0)=1$ and $x'(0)=0$. 

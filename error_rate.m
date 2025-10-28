@@ -1,5 +1,5 @@
 close all
-nn = 6; N = 9; k = 1; 
+nn = 6; N = 10; k = 1; 
 f = @(x,y) k*y; 
 y0 = 1; a = 0; b = 2; 
 y_ex = @(x) y0*exp(k*x);
@@ -24,15 +24,16 @@ for i = 1:nn
 	N = 2*N; 
 end	
 figure(3), hold on
-loglog(h,err_fe,'*-','linewidth',1.5);
-loglog(h,err_rk2,'d-','linewidth',1.5);
-loglog(h,err_rk4,'>-','linewidth',1.5);
-legend('Euler (order 1)','RK2','RK4','location','southeast');
+loglog(h,err_fe,'*-b','linewidth',1.5,'displayname','Euler (order 1)');
 set(gca,'fontsize',24);
 title('Orders of Convergence');
-%loglog(h,h,'o-');
-%loglog(h,h.^2,'o-');
-%loglog(h,h.^4,'o-');
+%loglog(h,err_rk2,'d-k','linewidth',1.5,'displayname','RK2');
+%loglog(h,err_rk4,'>-r','linewidth',1.5,'displayname','RK4');
+loglog(h,h,'*--b','displayname','p=1');
+%loglog(h,h.^2,'d--k','displayname','p=2');
+%loglog(h,h.^4,'>--r','displayname','p=4');
+legend('location','southeast');
+
 
 
 		

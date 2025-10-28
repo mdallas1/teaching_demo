@@ -1,5 +1,12 @@
 function harmonic_oscillator(N,solver) 
 	% ===========================
+	%
+	% harmonic_oscillator(N,solver)
+	%
+	% N is the number of nodes, and 
+	% solver = 'fwd_euler', 'rk2', 
+	% or 'rk4'.
+	%
 	% SOLVES THE MODEL PROBLEM 
 	% x''(t) + x(t) = 0, 
 	% x(0) = 1, x'(0) = 0. 
@@ -22,7 +29,7 @@ function harmonic_oscillator(N,solver)
 	if strcmp(solver,'fwd_euler')
 		y = fwd_euler(a,b,y0,f,N); 
 		figtitle = 'Foward Euler'; 
-		lin = 'r--';
+		lin = 'b--';
 	elseif strcmp(solver,'bck_euler')
 		% BACKWARD EULER 
 		y = bck_euler(a,b,y0,f,N);

@@ -8,7 +8,7 @@ methods for ordinary differential equations. We will review
 then discuss higher-order methods that aim to improve on 
 these shortcomings. 
 
-The lecture slides may be found in `teaching_demo.pdf`. The code 
+The lecture slides may be found in `L1.pdf`. The code 
 demonstrations are written in MATLAB/GNU Octave. They are:
 
 - `fwd_euler`: Forward Euler method. 
